@@ -18,7 +18,7 @@ To have your stake pool nodes logs on your Grafana Server with Loki and Promtail
 
 https://developers.cardano.org/docs/stake-pool-course/handbook/grafana-loki
 
-# Grafana Server Logs
+# Grafana Server Logs Dashboard
 
 This dashboard displays logs from my Relays and Block Producers.
 
@@ -32,6 +32,6 @@ This dashboard displays logs from my Relays and Block Producers.
 
 ![Capture d’écran 2022-12-27 à 14 20 07](https://user-images.githubusercontent.com/113426048/209678320-9436e890-942c-4b87-84fc-4c13484ee04a.png)
 
-# Grafana Main Dashboard 
+# Grafana Main Monitoring Dashboard 
 
 (soon)
