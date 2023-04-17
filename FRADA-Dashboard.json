@@ -3292,6 +3292,7 @@
         "type": "prometheus",
         "uid": "${DS_PROMETHEUS}"
       },
+      "description": "",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -3338,7 +3339,9 @@
         "x": 18,
         "y": 26
       },
-      "id": 145,
+      "id": 55,
+      "links": [],
+      "maxDataPoints": 100,
       "options": {
         "colorMode": "value",
         "graphMode": "none",
@@ -3357,7 +3360,6 @@
       "pluginVersion": "9.3.2",
       "targets": [
         {
-          "data": "",
           "editorMode": "code",
           "expr": "poolstats_roa_lifetime{}",
           "legendFormat": "__auto",
@@ -3371,7 +3373,7 @@
           }
         }
       ],
-      "title": "Lifetime ROA %",
+      "title": "Lifetime ROA",
       "type": "stat"
     },
     {
@@ -3379,7 +3381,7 @@
         "type": "prometheus",
         "uid": "${DS_PROMETHEUS}"
       },
-      "description": "since node restart -- from EKG",
+      "description": "",
       "fieldConfig": {
         "defaults": {
           "decimals": 0,
@@ -3450,7 +3452,7 @@
           },
           "editorMode": "code",
           "exemplar": true,
-          "expr": "cardano_node_metrics_Forge_node_is_leader_int {alias=\"Core\"}",
+          "expr": "poolstats_blocks_lifetime{}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{alias}}",
@@ -3458,7 +3460,7 @@
           "refId": "A"
         }
       ],
-      "title": "Blocks Assigned (EKG)",
+      "title": "Blocks forged (lifetime)",
       "type": "stat"
     },
     {
@@ -3466,7 +3468,7 @@
         "type": "prometheus",
         "uid": "${DS_PROMETHEUS}"
       },
-      "description": "since node restart -- from EKG",
+      "description": "",
       "fieldConfig": {
         "defaults": {
           "decimals": 0,
@@ -3505,7 +3507,7 @@
         "x": 22,
         "y": 26
       },
-      "id": 55,
+      "id": 217,
       "links": [],
       "maxDataPoints": 100,
       "options": {
@@ -3520,7 +3522,7 @@
         "orientation": "horizontal",
         "reduceOptions": {
           "calcs": [
-            "last"
+            "lastNotNull"
           ],
           "fields": "",
           "values": false
@@ -3535,15 +3537,17 @@
             "type": "prometheus",
             "uid": "${DS_PROMETHEUS}"
           },
+          "editorMode": "code",
           "exemplar": true,
-          "expr": "cardano_node_metrics_Forge_forged_int {alias=\"Core\"}",
+          "expr": "poolstats_blocks_epoch{}",
           "hide": false,
           "interval": "",
           "legendFormat": "{{alias}}",
+          "range": true,
           "refId": "A"
         }
       ],
-      "title": "Blocks Forged (EKG)",
+      "title": "Blocks forged (epoch)",
       "type": "stat"
     },
     {
@@ -4061,8 +4065,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -4222,8 +4225,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -4385,8 +4387,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -4546,8 +4547,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -4689,8 +4689,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -4880,8 +4879,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -5071,8 +5069,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -5268,8 +5265,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -5379,8 +5375,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -5529,8 +5524,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -5683,8 +5677,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -5895,8 +5888,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -6092,8 +6084,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -6257,7 +6248,7 @@
     "list": []
   },
   "time": {
-    "from": "now-1h",
+    "from": "now-6h",
     "to": "now"
   },
   "timepicker": {
@@ -6287,6 +6278,6 @@
   "timezone": "",
   "title": "FRADA Monitor",
   "uid": "CardanoFrance",
-  "version": 110,
+  "version": 126,
   "weekStart": ""
 }
