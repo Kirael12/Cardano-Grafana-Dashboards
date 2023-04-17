@@ -34,4 +34,14 @@ This dashboard displays logs from my Relays and Block Producers.
 
 # Grafana Main Monitoring Dashboard 
 
-(soon)
+This Dashboard displays every information i need to monitor my Block Producer and my 2 Relays. For example :
+
+- CPU/RAM/Disk Space
+- Peers out and Peers in (based on my Peers In monitoring script : https://github.com/Kirael12/Cardano-Monitoring-Peers-In)
+- Major Garbage Collection (and missed slot) on my Block Producer
+- KES expiration
+- Block Height, Rate, and Chain Density
+- Transactions count
+- Leaderlog Slot schedule (based on cncli leaderlog script : https://github.com/cardano-community/cncli)
+- System load, Network load, NTP health, etc...
+
