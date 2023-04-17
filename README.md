@@ -45,7 +45,7 @@ This Dashboard displays every information i need to monitor my Block Producer an
 - Leaderlog Slot schedule (based on cncli leaderlog script : https://github.com/cardano-community/cncli)
 - System load, Network load, NTP health, etc...
 
-![Captur d’écran 2023-04-17 à 14 25 41](https://user-images.githubusercontent.com/113426048/232484701-85b2534b-48a5-4cde-b23c-7f280a98bcd8.png)
+![Capture d’écran 2023-04-17 à 20 08 41](https://user-images.githubusercontent.com/113426048/232573508-79d79fd3-c7d0-4d02-889e-8c60a12d1798.png)
 
 ![Capture d’écran 2023-04-17 à 13 28 16](https://user-images.githubusercontent.com/113426048/232484173-bd7809ed-b406-49f4-aaea-16d49ae43219.png)
 
